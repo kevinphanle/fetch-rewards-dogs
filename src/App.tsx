@@ -21,8 +21,7 @@ function App() {
   const [isMatchModalOpen, setIsMatchModalOpen] = useState(false);
 
   const itemsPerPage = 12;
-  const { isAuthenticated, authError, setIsAuthenticated, handleSignOut } =
-    useAuth();
+  const { isAuthenticated, setIsAuthenticated, handleSignOut } = useAuth();
 
   const {
     isLoading,

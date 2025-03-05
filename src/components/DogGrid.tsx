@@ -18,7 +18,7 @@ export const DogGrid = ({
   const selectedDogIds = selectedDogs.map((dog) => dog.id);
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-8">
-      {dogs.map((dog, index) => (
+      {dogs.map((dog) => (
         <Transition
           key={dog.id}
           show={!isImagesLoading}
@@ -28,7 +28,6 @@ export const DogGrid = ({
           leave="transition-all duration-300 ease-in"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
-          style={{ transitionDelay: `${index * 50}ms` }}
         >
           <div className="h-full">
             <DogCard
